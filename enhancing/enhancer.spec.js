@@ -22,7 +22,7 @@ describe('enhancer.js', () => {
                 durability: "87",
                 enhancement: 0,
             }
-
+            
             const enhancedItem = enhancer.success(item)
 
             expect(enhancedItem.enhancement).toBe(1)
