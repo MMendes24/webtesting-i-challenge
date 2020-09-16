@@ -28,4 +28,18 @@ describe('enhancer.js', () => {
             expect(enhancedItem.enhancement).toBe(1)
         })
     })
+    describe('.fail()', () => {
+        it('can fail', function () {
+            const item = {
+                name: "George Washington's Cavalry Saber",
+                durability: "87",
+                enhancement: 18,
+            }
+
+            const failedItem = enhancer.fail(item)
+
+            expect(failedItem.durability).toBe(77)
+            expect(failedItem.enhancement).toBe(17)
+        })
+    })
 })
